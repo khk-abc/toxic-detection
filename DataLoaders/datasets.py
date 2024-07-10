@@ -97,13 +97,7 @@ class MyDataset(Dataset):
                     ori_text = repeat_sent(ori_text, 80)
                 else:
                     ori_text = repeat_sent(ori_text, 80)
-            if row.get('response') is not None and self.args.concat_social_sense:
-                print('使用gpt的social senses！')
-                # ori_text = '给定言论：“' + ori_text + '”。 相关社会含义涉及: “' + row['response']+'”。' + "该言论是："
-                # ori_text = '给定言论：“' + ori_text + '”， 相关社会含义涉及: “' + row['response']+'”。' + "根据上述信息，对该言论的毒性可以做出以下判断："
-                ori_text = '给定言论：“' + ori_text + '”， 相关社会含义涉及: “' + row['response']+'”。' + "根据上述信息，该言论的毒性是："
-            else:
-                ori_text = '给定言论：“' + ori_text + "“，该言论的毒性是："
+            ori_text = '给定言论：“' + ori_text + "“，该言论的毒性是："
 
             # samples = self.in_context_sampling(k=1)
             # ori_text = self.modify_text(ori_text=ori_text,method='in-context',samples=samples)
