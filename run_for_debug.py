@@ -72,7 +72,6 @@ parser.add_argument("--enhace_level", default='sent', help='当对不同任务�
 parser.add_argument("--task_prompt_output", default='embeddings_emb', help='对于任务对应的定义以及prompt采用什么方式提取特征！'
                     , choices=['embeddings_emb', 'bert-with-eval'])
 parser.add_argument("--use_soft_alpha", type=float, default=0., help='当大于0时使用gpt生成的软标签！')
-parser.add_argument("--concat_social_sense", action='store_true', default=False, help='是否串接gpt生成的社会背景含义！')
 parser.add_argument("--pad_size", type=int, default=160, help='输入句子长度！')
 parser.add_argument("--gpt_pad_size", type=int, default=160, help='gpt背景信息句子长度！')
 
