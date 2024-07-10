@@ -132,14 +132,8 @@ class TotalModel(nn.Module):
         if self.myargs.splitbatch:
             print('一个样本一个样本处理！')
 
-        if myargs.concat_social_sense:
-            print("串接gpt背景信息！")
-
         if myargs.use_soft_alpha > 0:
             print('使用gpt软标签！')
-
-        if myargs.concat_social_sense:
-            print("串接gpt生成的社会含义！")
 
         if myargs.use_gpt_tree:
             print("使用gpt构造树！")
